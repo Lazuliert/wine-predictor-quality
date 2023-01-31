@@ -7,6 +7,9 @@
         "contact_email":"beteko@donotcontactme.com"
     },
     "data":{
-        "path": "</path/to/wine/data>"
+        "path": "/home/tarti/Dev/wine-predictor-quality/dataset/winequality.csv"
+    },
+    "model": {
+        "path": "/home/tarti/Dev/wine-predictor-quality/model/model.jl"
     }
 }

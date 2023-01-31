@@ -29,6 +29,7 @@ paths:
   /wine/model:
     patch:
       summary: (Re)train the wine quality model based on a predefined dataset
+      operationId: wine_predictor_api.services.learner.train_model
       tags: [ Learning ]
       responses:
           '200':
