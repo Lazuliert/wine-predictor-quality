@@ -12,11 +12,12 @@ paths:
   /ping:
     get:
       summary: Check the API health
-      operationId: wine_predictor_api.services.health
+      operationId: wine_predictor_api.services.healthcheck.ping
       tags: [ Health ]
       responses:
         '200':
           description: API is up and running
+
 tags:
   - name: Health
     description: API Health

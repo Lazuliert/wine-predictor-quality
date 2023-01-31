@@ -1,0 +1,41 @@
+openapi: 3.0.0
+
+info:
+  title: Wine Quality Estimation API
+  version: 0.1.0
+  contact:
+    name: Agustin ZORZANO
+    email: apiteam@swagger.io
+    url: http://www.google.com
+
+servers:
+  - url: /
+
+tags:
+  - name: Health
+    description: API Health
+  - name: Learning
+
+paths:
+  /ping:
+    get:
+      summary: Check the API health
+      operationId: wine_predictor_api.services.healthcheck.ping
+      tags: [ Health ]
+      responses:
+        '200':
+          description: API is up and running
+  /wine/model:
+    patch:
+      summary: (Re)train the wine quality model based on a predefined dataset
+      tags: [ Learning ]
+      responses:
+          '200':
+            description: New model has been successfully trained but discarded
+          '201':
+            description: New model has been successfully trained and saved as default
+          '404':
+            description: Model path is not found
+          '500':
+            description: Internal server error
+
