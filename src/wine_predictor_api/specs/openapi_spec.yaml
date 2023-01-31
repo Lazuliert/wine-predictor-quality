@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: Wine Quality Estimation API
+  version: '0.1.0'
+  contact:
+    name: Agustin ZORZANO
+    email: apiteam@swagger.io
+    url: http://www.google.com
+servers:
+  - url: /
+paths:
+  /ping:
+    get:
+      summary: Check the API health
+      operationId: wine_predictor_api.services.health
+      tags: [ Health ]
+      responses:
+        '200':
+          description: API is up and running
+tags:
+  - name: Health
+    description: API Health
+
